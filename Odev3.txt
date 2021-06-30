@@ -1,0 +1,10 @@
+SELECT * FROM country 
+WHERE country LIKE 'A%a' ;
+
+SELECT * FROM country 
+WHERE LENGTH(country)>5 AND country LIKE '%n' ;
+
+
+
+SELECT * FROM film
+WHERE title LIKE 'C%' AND rental_rate = 2.99 AND length(title)>90
