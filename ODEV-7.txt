@@ -1,0 +1,18 @@
+select rating 
+from film
+Group By rating;
+
+select replacement_cost , COUNT(replacement_cost)
+from film
+Group By replacement_cost
+HAVING COUNT(replacement_cost)>50;
+
+select store_id,COUNT(customer_id)
+from customer
+GROUP BY store_id;
+
+select country_id,COUNT(country_id) as Sehir_sayi
+from city
+Group by(country_id )
+ORDER BY Sehir_sayi DESC
+LIMIT 1;
