@@ -1,0 +1,9 @@
+Select city.city,country.country From country
+INNER JOIN city ON country.country_id=city.country_id
+
+Select customer.first_name,customer.last_name FROM customer
+INNER JOIN payment ON payment.customer_id=customer.customer_id;
+
+
+Select customer.first_name,customer.last_name,rental.rental_id From customer 
+JOIN rental ON customer.customer_id=rental.customer_id;
