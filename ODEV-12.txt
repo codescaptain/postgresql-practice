@@ -1,0 +1,25 @@
+select COUNT(*) as FilmSayisi from film
+where length>
+(
+	SELECT ROUND(AVG(length)) from film
+);
+
+
+select Count(*) from film
+where rental_rate=
+(
+	Select MAX(rental_rate) from film
+);
+
+
+select * from film 
+where rental_rate=
+(
+	select MIN(rental_rate) from film
+)
+AND
+replacement_cost=
+(
+	select MIN(replacement_cost) from film
+)
+;
